@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixTimeMilliseconds.JsonConversion", "UnixTimeMilliseconds.JsonConverter\UnixTimeMilliseconds.JsonConversion.csproj", "{1628E270-24E2-446F-AFA9-420A81650EBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixTimeMillseconds.JsonConversion.Tests.Unit", "UnixTimeMillseconds.JsonConverter.Tests.Unit\UnixTimeMillseconds.JsonConversion.Tests.Unit.csproj", "{8DA07118-6559-4D66-BBD9-23A3F2791C4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnixTimeMilliseconds.JsonConversion.Tests.Unit", "UnixTimeMillseconds.JsonConverter.Tests.Unit\UnixTimeMilliseconds.JsonConversion.Tests.Unit.csproj", "{8DA07118-6559-4D66-BBD9-23A3F2791C4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

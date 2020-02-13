@@ -11,17 +11,17 @@ namespace UnixTimeMillseconds.JsonConversion.Tests.Unit
         public void TestDeserialize()
         {
             var input = "1519318716745";
-            var correct = new DateTime(2018, 2, 22, 16, 58, 36, 745);
+            var correct = DateTime.SpecifyKind(new DateTime(2018, 2, 22, 16, 58, 36, 745), DateTimeKind.Utc);
 
             var rslt = JsonConvert.DeserializeObject<DateTime>(input, new UnixTimeMillisecondsConverter());
 
-            Assert.That(rslt, Is.EqualTo(correct));
+            Assert.That(rslt.ToUniversalTime(), Is.EqualTo(correct));
         }
 
         [Test]
         public void TestSerialize()
         {
-            var input = new DateTime(2018, 2, 22, 16, 58, 36, 745);
+            var input = DateTime.SpecifyKind(new DateTime(2018, 2, 22, 16, 58, 36, 745), DateTimeKind.Utc);
             var correct = "1519318716745";
 
             var rslt = JsonConvert.SerializeObject(input, new UnixTimeMillisecondsConverter());

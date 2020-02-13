@@ -16,12 +16,12 @@ namespace UnixTimeMilliseconds.JsonConversion
         {
             if (reader.Value == null)
                 return null;
-            return DateTimeOffset.FromUnixTimeMilliseconds((long)reader.Value).DateTime;
+            return DateTimeOffset.FromUnixTimeMilliseconds((long)reader.Value).DateTime.ToLocalTime();
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var date = ((DateTime)value).ToLocalTime();
+            var date = ((DateTime)value);
             var unixTime = new DateTimeOffset(date).ToUnixTimeMilliseconds();
             writer.WriteRawValue(unixTime.ToString());
         }

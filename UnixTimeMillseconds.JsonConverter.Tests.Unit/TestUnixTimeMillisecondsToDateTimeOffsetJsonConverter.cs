@@ -21,7 +21,7 @@ namespace UnixTimeMillseconds.JsonConversion.Tests.Unit
         [Test]
         public void TestSerialize()
         {
-            var input = new DateTimeOffset(new DateTime(2018, 2, 22, 16, 58, 36, 745).ToLocalTime());
+            var input = new DateTimeOffset(DateTime.SpecifyKind(new DateTime(2018, 2, 22, 16, 58, 36, 745), DateTimeKind.Utc));
             var correct = "1519318716745";
 
             var rslt = JsonConvert.SerializeObject(input, new UnixTimeMillisecondsToDateTimeOffsetJsonConverter());
