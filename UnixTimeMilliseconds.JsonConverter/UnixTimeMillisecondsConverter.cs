@@ -6,6 +6,7 @@ namespace UnixTimeMilliseconds.JsonConversion
 {
     /// <summary>
     /// Allows converting between JSON-embedded millisecond-encoded Unix date times and .Net's DateTime type.
+    /// The time is deserialized into your local time zone and serialized into UTC
     /// </summary>
     public class UnixTimeMillisecondsConverter : DateTimeConverterBase
     {
